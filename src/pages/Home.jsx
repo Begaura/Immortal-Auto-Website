@@ -87,9 +87,9 @@ export default function Home() {
                 Book Service
                 <ChevronRight size={18} />
               </Link>
-              <a href="tel:7805047506" className="btn-outline text-base px-8 py-4">
+              <a href="tel:7805047505" className="btn-outline text-base px-8 py-4">
                 <Phone size={18} />
-                780.504.7506
+                780-504-7505
               </a>
             </div>
 
@@ -259,9 +259,9 @@ export default function Home() {
               <Link to="/contact" className="btn-primary text-base px-8 py-4">
                 Schedule Service
               </Link>
-              <a href="tel:7805047506" className="btn-outline text-base px-8 py-4">
+              <a href="tel:7805047505" className="btn-outline text-base px-8 py-4">
                 <Phone size={18} />
-                Call 780.504.7506
+                Call 780-504-7505
               </a>
             </div>
           </AnimatedSection>

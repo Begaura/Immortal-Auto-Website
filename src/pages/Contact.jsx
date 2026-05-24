@@ -89,8 +89,8 @@ export default function Contact() {
                     {
                       icon: Phone,
                       label: 'Phone',
-                      value: '780.504.7506',
-                      href: 'tel:7805047506',
+                      value: '780-504-7505',
+                      href: 'tel:7805047505',
                       sub: 'Call or text anytime',
                     },
                     {

@@ -33,9 +33,9 @@ export default function Navbar() {
       <div className="bg-brand-orange hidden md:block">
         <div className="max-w-7xl mx-auto px-4 py-1.5 flex justify-between items-center text-xs font-medium text-white">
           <span>Heavy Duty Truck & Diesel Repair — Sherwood Park, AB</span>
-          <a href="tel:7805047506" className="flex items-center gap-1.5 hover:text-white/80 transition-colors">
+          <a href="tel:7805047505" className="flex items-center gap-1.5 hover:text-white/80 transition-colors">
             <Phone size={12} />
-            780.504.7506
+            780-504-7505
           </a>
         </div>
       </div>
@@ -67,7 +67,7 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href="tel:7805047506"
+              href="tel:7805047505"
               className="ml-4 btn-primary text-xs py-2.5 px-5"
             >
               <Phone size={14} />
@@ -111,11 +111,11 @@ export default function Navbar() {
                 </Link>
               ))}
               <a
-                href="tel:7805047506"
+                href="tel:7805047505"
                 className="mt-2 btn-primary justify-center"
               >
                 <Phone size={14} />
-                Call 780.504.7506
+                Call 780-504-7505
               </a>
             </div>
           </motion.div>

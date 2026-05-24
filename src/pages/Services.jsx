@@ -92,7 +92,7 @@ export default function Services() {
                   Schedule Service
                   <ChevronRight size={16} />
                 </Link>
-                <a href="tel:7805047506" className="btn-outline">
+                <a href="tel:7805047505" className="btn-outline">
                   <Phone size={16} />
                   Call Us
                 </a>
@@ -249,7 +249,7 @@ export default function Services() {
                 <h3 className="text-white font-bold text-xl mb-6">Quick Contact</h3>
                 <div className="space-y-4">
                   {[
-                    { label: 'Phone', value: '780.504.7506', href: 'tel:7805047506' },
+                    { label: 'Phone', value: '780-504-7505', href: 'tel:7805047505' },
                     { label: 'Email', value: 'immortalautomotiveperformance@outlook.com', href: 'mailto:immortalautomotiveperformance@outlook.com' },
                     { label: 'Address', value: '114 Sioux Rd, Sherwood Park, AB', href: null },
                     { label: 'Hours', value: 'Mon–Fri 8AM–5PM | Sat by Appt', href: null },
