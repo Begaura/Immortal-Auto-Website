@@ -196,9 +196,8 @@ export default function About() {
                   </div>
                 ))}
               </div>
-              <div className="grid grid-cols-3 gap-4 mb-8">
+              <div className="grid grid-cols-2 gap-4 mb-8">
                 {[
-                  { value: '15+', label: 'Years in Business' },
                   { value: 'All', label: 'Makes & Models' },
                   { value: 'AB', label: 'Licensed & Insured' },
                 ].map(({ value, label }) => (
