@@ -177,11 +177,11 @@ export default function About() {
                 title="A Shop You Can Actually Trust"
               />
               <p className="text-white/60 leading-relaxed mb-6">
-                Located in Sherwood Park, Alberta, serving Edmonton-area truck owners with professional, reliable diesel and heavy duty vehicle repair. When you bring your truck to us, you're not just another customer — you're someone we want to see driving away satisfied.
+                Located in Sherwood Park, Alberta, serving Edmonton-area truck owners with professional, reliable diesel and vehicle repair. When you bring your truck to us, you're not just another customer — you're someone we want to see driving away satisfied.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
                 {[
-                  { icon: Truck, title: 'Heavy Duty Trucks', desc: 'All makes and models of heavy duty pickup and work trucks.' },
+                  { icon: Truck, title: 'Trucks & Pickups', desc: 'All makes and models of pickup and work trucks.' },
                   { icon: Wrench, title: 'Diesel Pickups', desc: 'Diesel engine diagnostics, repairs, and performance work.' },
                   { icon: Package, title: 'Commercial Vehicles', desc: 'Fleet and commercial vehicle maintenance and repair.' },
                 ].map(({ icon: Icon, title, desc }) => (

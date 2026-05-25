@@ -79,7 +79,7 @@ export default function Home() {
             </h1>
 
             <p className="text-lg md:text-xl text-white/70 mb-8 leading-relaxed max-w-xl">
-              Heavy duty truck repair, diesel diagnostics, engine rebuilds, and transmission service — done right the first time.
+              Truck repair, diesel diagnostics, engine rebuilds, and transmission service — done right the first time.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -155,7 +155,7 @@ export default function Home() {
               />
               <div className="space-y-4 mb-8">
                 {[
-                  { title: 'Experienced Technicians', desc: 'Our certified mechanics have years of hands-on experience with heavy duty trucks and diesel engines.' },
+                  { title: 'Experienced Technicians', desc: 'Our certified mechanics have years of hands-on experience with trucks and diesel engines.' },
                   { title: 'Honest Diagnostics & Fair Pricing', desc: 'We explain everything clearly before any work begins — no hidden fees, no unnecessary repairs.' },
                   { title: 'Daily Driver & Performance Specialists', desc: 'Whether it\'s your work truck or a performance build, we handle it with equal care and precision.' },
                   { title: 'Fast Turnaround Times', desc: 'We know your truck is your livelihood. We work efficiently to get you back on the road fast.' },
@@ -186,7 +186,7 @@ export default function Home() {
           <SectionHeading
             label="Our Services"
             title="Our Services"
-            subtitle="From oil changes to full engine rebuilds, we service all makes and models of heavy duty trucks and diesel vehicles."
+            subtitle="From oil changes to full engine rebuilds, we service all makes and models of trucks and diesel vehicles."
             center
           />
 

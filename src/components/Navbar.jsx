@@ -32,7 +32,7 @@ export default function Navbar() {
       {/* Top bar */}
       <div className="bg-brand-orange hidden md:block">
         <div className="max-w-7xl mx-auto px-4 py-1.5 flex justify-between items-center text-xs font-medium text-white">
-          <span>Heavy Duty Truck & Diesel Repair — Sherwood Park, AB</span>
+          <span>Truck & Diesel Repair — Sherwood Park, AB</span>
           <a href="tel:7805047505" className="flex items-center gap-1.5 hover:text-white/80 transition-colors">
             <Phone size={12} />
             780-504-7505

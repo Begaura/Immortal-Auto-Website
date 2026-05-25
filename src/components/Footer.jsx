@@ -21,7 +21,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-white/50 text-sm leading-relaxed">
-              Expert heavy duty truck repair and diesel mechanics in Sherwood Park & Edmonton, AB. Built to last. Tuned to perform.
+              Expert truck repair and diesel mechanics in Sherwood Park & Edmonton, AB. Built to last. Tuned to perform.
             </p>
           </div>
 
@@ -84,8 +84,8 @@ export default function Footer() {
                 <span className="flex items-start gap-2.5 text-white/60 text-sm">
                   <Clock size={14} className="mt-0.5 flex-shrink-0 text-brand-orange" />
                   <span>
-                    Mon–Fri: 8:00 AM – 5:00 PM<br />
-                    Sat: By Appointment<br />
+                    Mon–Fri: 9:00 AM – 6:00 PM<br />
+                    Sat: Closed<br />
                     Sun: Closed
                   </span>
                 </span>

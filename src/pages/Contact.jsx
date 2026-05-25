@@ -135,8 +135,8 @@ export default function Contact() {
                   </div>
                   <div className="space-y-2">
                     {[
-                      { day: 'Monday – Friday', hours: '8:00 AM – 5:00 PM', open: true },
-                      { day: 'Saturday', hours: 'By Appointment', open: true },
+                      { day: 'Monday – Friday', hours: '9:00 AM – 6:00 PM', open: true },
+                      { day: 'Saturday', hours: 'Closed', open: false },
                       { day: 'Sunday', hours: 'Closed', open: false },
                     ].map(({ day, hours, open }) => (
                       <div key={day} className="flex justify-between items-center text-sm py-1.5 border-b border-white/5 last:border-0">
