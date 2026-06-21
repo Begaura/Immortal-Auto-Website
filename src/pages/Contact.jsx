@@ -28,13 +28,35 @@ export default function Contact() {
     message: '',
   })
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
 
   const handleChange = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }))
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault()
-    // Replace with actual form submission (Formspree, EmailJS, etc.)
-    setSubmitted(true)
+    setLoading(true)
+    setError('')
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}))
+        throw new Error(data.error || 'Failed to send message')
+      }
+
+      setSubmitted(true)
+      setForm({ name: '', email: '', phone: '', service: '', date: '', message: '' })
+    } catch (err) {
+      setError(err.message || 'Failed to send message')
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -59,11 +81,11 @@ export default function Contact() {
             transition={{ duration: 0.7 }}
           >
             <span className="section-label block mb-4">Get in Touch</span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-white mb-4">
+            <h1 className="font-display text-7xl md:text-8xl lg:text-9xl leading-none text-white mb-4 tracking-wide">
               <span className="text-gradient">Contact Us</span>
             </h1>
             <p className="text-white/60 text-lg max-w-xl mx-auto">
-              Need help with your truck? Whether you're dealing with engine issues, transmission problems, or need diagnostics, the team at Immortal Automotive Performance is here to help.
+              Tell us what's going on with your truck. We'll give you a straight answer — not a runaround.
             </p>
           </motion.div>
         </div>
@@ -78,9 +100,9 @@ export default function Contact() {
             <AnimatedSection direction="right">
               <div className="space-y-8">
                 <div>
-                  <h2 className="text-3xl font-black text-white mb-2">Reach Out Today</h2>
+                  <h2 className="text-3xl font-black text-white mb-2">Let's Talk About Your Truck</h2>
                   <p className="text-white/60">
-                    Reach out today to schedule a service or ask any questions about your vehicle.
+                    Call, text, or fill out the form. We'll get back to you fast with straight answers — no fluff.
                   </p>
                 </div>
 
@@ -276,14 +298,19 @@ export default function Contact() {
                     />
                   </div>
 
+                  {error && (
+                    <p className="text-red-400 text-sm text-center">{error}</p>
+                  )}
+
                   <motion.button
                     type="submit"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
+                    disabled={loading}
                     className="w-full btn-primary justify-center py-4 text-base"
                   >
                     <Send size={16} />
-                    Submit Request
+                    {loading ? 'Sending…' : 'Submit Request'}
                   </motion.button>
 
                   <p className="text-white/25 text-xs text-center">

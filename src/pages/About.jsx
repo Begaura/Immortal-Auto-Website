@@ -46,8 +46,8 @@ export default function About() {
         <div className="absolute inset-0">
           {/* Mechanic working on engine — matches reference image 3 style */}
           <GrayscaleImage
-            src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1600&q=80"
-            alt="Mechanic working in shop"
+            src="/burnout-truck.png"
+            alt="Black truck doing burnout"
             overlayIntensity="strong"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/90 to-brand-dark" />
@@ -61,11 +61,11 @@ export default function About() {
             transition={{ duration: 0.7 }}
           >
             <span className="section-label block mb-4">Our Story</span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-white mb-6 max-w-3xl mx-auto">
-              About <span className="text-gradient">Immortal Automotive Performance</span>
+            <h1 className="font-display text-7xl md:text-8xl lg:text-9xl leading-none text-white mb-6 max-w-3xl mx-auto tracking-wide">
+              About <span className="text-gradient">Immortal Automotive</span>
             </h1>
             <p className="text-white/60 text-lg leading-relaxed max-w-2xl mx-auto">
-              We believe automotive repair should be built on trust, quality workmanship, and honest service. Your truck is an important investment, and we treat every vehicle that comes through our shop with the same care and attention we would give our own.
+              We started Immortal Automotive because we were sick of shops that upsell, oversell, and underdeliver. If something's wrong with your truck, we'll tell you exactly what it is, what it costs, and why — before we touch anything. No surprises.
             </p>
           </motion.div>
         </div>
@@ -79,8 +79,8 @@ export default function About() {
             <AnimatedSection direction="right">
               <div className="relative h-[420px] rounded-xl overflow-hidden">
                 <GrayscaleImage
-                  src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=800&q=80"
-                  alt="Vehicle on car lift in shop"
+                  src="/about-hero.png"
+                  alt="Mechanic working on vehicle"
                   overlayIntensity="medium"
                 />
                 {/* Orange label banner overlay — like in the reference images */}
@@ -104,13 +104,13 @@ export default function About() {
               />
               <div className="space-y-4 text-white/60 leading-relaxed">
                 <p>
-                  At Immortal Automotive Performance, we believe automotive repair should be built on trust, quality workmanship, and honest service. Your truck is an important investment, and we treat every vehicle that comes through our shop with the same care and attention we would give our own.
+                  We started Immortal Automotive because we were tired of shops that treat customers like a transaction — upsell the service, hide the fees, hand you a bill that looks nothing like the estimate.
                 </p>
                 <p>
-                  We take the time to properly diagnose issues and explain what is happening with your vehicle. Our goal is to provide clear information and real solutions, not unnecessary repairs.
+                  Here it's simple: we diagnose it, we tell you what's wrong, we tell you what it costs, and you decide. No pressure. No unnecessary repairs. No surprises on the bill.
                 </p>
                 <p>
-                  Every repair is completed with attention to detail and the right tools for the job. We focus on doing the work correctly the first time, so you can drive with confidence.
+                  Every job gets done right the first time — or we make it right. That's not a tagline, that's how we've built our reputation in Sherwood Park one truck at a time.
                 </p>
               </div>
               <div className="mt-8">
@@ -154,16 +154,17 @@ export default function About() {
       </section>
 
       {/* ── Full-width image divider ── */}
-      <div className="relative h-72 overflow-hidden">
+      <div className="relative h-80 overflow-hidden">
         <GrayscaleImage
           src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1600&q=80"
           alt="Mechanic working on truck engine"
           overlayIntensity="strong"
         />
-        <div className="absolute inset-0 bg-brand-dark/60" />
-        {/* Orange label banner — like reference images */}
-        <div className="absolute bottom-0 left-0 right-0 bg-brand-orange px-8 py-3">
-          <span className="text-white font-black text-xl uppercase tracking-widest">Truck Specialists</span>
+        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 hazard-stripe" />
+        <div className="absolute top-0 left-0 right-0 h-1.5 bg-brand-orange" />
+        <div className="absolute bottom-0 left-0 right-0 bg-brand-orange px-8 py-4">
+          <span className="font-display text-3xl text-white uppercase tracking-widest">Truck Specialists — Sherwood Park, AB</span>
         </div>
       </div>
 
@@ -177,7 +178,7 @@ export default function About() {
                 title="A Shop You Can Actually Trust"
               />
               <p className="text-white/60 leading-relaxed mb-6">
-                Located in Sherwood Park, Alberta, serving Edmonton-area truck owners with professional, reliable diesel and vehicle repair. When you bring your truck to us, you're not just another customer — you're someone we want to see driving away satisfied.
+                Sherwood Park isn't a big city. Your neighbours know where you take your truck. We built this shop knowing that — our reputation rides on every vehicle we touch. We're not chasing volume. We're building something that lasts.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
                 {[
@@ -247,12 +248,12 @@ export default function About() {
 
         <div className="relative z-10 max-w-3xl mx-auto px-4 text-center">
           <AnimatedSection>
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
-              Ready to Experience the{' '}
-              <span className="text-gradient">Difference?</span>
+            <h2 className="font-display text-6xl md:text-8xl text-white leading-none tracking-wide mb-4">
+              Ready to Work With a Shop{' '}
+              <span className="text-gradient">That Actually Gets It?</span>
             </h2>
             <p className="text-white/60 text-lg mb-8">
-              Contact us today to schedule your service appointment or get a free estimate.
+              Book online or give us a call. No obligation — just straight answers about your truck.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link to="/contact" className="btn-primary text-base px-8 py-4">

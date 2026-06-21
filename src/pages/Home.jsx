@@ -25,29 +25,29 @@ const services = [
 ]
 
 const whyUs = [
-  'Experienced technicians',
-  'Honest diagnostics & fair pricing',
-  'Performance and daily driver specialists',
-  'Fast turnaround times',
+  'Diesel & performance specialists',
+  'Straight answers before we touch your truck',
+  'Daily drivers & full builds — we do both',
+  'Fast turnaround, no runaround',
 ]
 
 const stats = [
-  { value: 'Same-Day', label: 'Service Available' },
-  { value: '100%', label: 'Satisfaction Goal' },
-  { value: 'Local', label: 'Proudly Local Business' },
-  { value: 'Fast', label: 'Response Time' },
+  { value: '100%', label: 'Satisfaction Guarantee' },
+  { value: '300+', label: 'Trucks Serviced' },
+  { value: '4.9★', label: 'Google Rating' },
+  { value: '24hr', label: 'Avg. Turnaround' },
 ]
 
 export default function Home() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0">
           {/* Heavy-duty truck in shop — grayscale + orange accent */}
           <GrayscaleImage
-            src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=1600&q=80"
-            alt="Pickup truck in repair shop"
+            src="/burnout-truck.png"
+            alt="Black truck doing burnout"
             overlayIntensity="strong"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/70 via-brand-dark/60 to-brand-dark" />
@@ -57,12 +57,12 @@ export default function Home() {
         {/* Orange accent bar */}
         <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-brand-orange" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
           <motion.div
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="max-w-3xl"
+            className="max-w-4xl"
           >
             <motion.span
               initial={{ opacity: 0, x: -20 }}
@@ -73,18 +73,18 @@ export default function Home() {
               Sherwood Park & Edmonton, AB
             </motion.span>
 
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight text-white mb-6">
-              Built to Last.{' '}
-              <span className="text-gradient">Tuned to Perform.</span>
+            <h1 className="font-display text-8xl sm:text-9xl lg:text-[10rem] leading-none text-white mb-6">
+              <span className="block tracking-wide">Your Truck.</span>
+              <span className="block text-gradient tracking-tight">Our Obsession.</span>
             </h1>
 
             <p className="text-lg md:text-xl text-white/70 mb-8 leading-relaxed max-w-xl">
-              Truck repair, diesel diagnostics, engine rebuilds, and transmission service — done right the first time.
+              From daily drivers to full performance builds — Sherwood Park's most trusted diesel and truck specialists.
             </p>
 
             <div className="flex flex-wrap gap-4">
               <Link to="/contact" className="btn-primary text-base px-8 py-4">
-                Book Service
+                Book Your Service
                 <ChevronRight size={18} />
               </Link>
               <a href="tel:7805047505" className="btn-outline text-base px-8 py-4">
@@ -113,14 +113,16 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* ── Stats ── */}
-      <section className="bg-brand-orange">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      {/* ── Impact Numbers ── */}
+      <section className="bg-black border-y border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/5">
             {stats.map(({ value, label }, i) => (
               <AnimatedSection key={label} delay={i * 0.1}>
-                <div className="text-3xl md:text-4xl font-black text-white">{value}</div>
-                <div className="text-white/80 text-sm font-medium mt-1">{label}</div>
+                <div className="py-10 px-6 text-center group">
+                  <div className="font-display text-6xl md:text-8xl text-brand-orange leading-none group-hover:scale-105 transition-transform duration-300">{value}</div>
+                  <div className="text-white/40 text-xs uppercase tracking-widest mt-3 font-semibold">{label}</div>
+                </div>
               </AnimatedSection>
             ))}
           </div>
@@ -151,14 +153,14 @@ export default function Home() {
             <div>
               <SectionHeading
                 label="Why Choose Us"
-                title="Why Choose Immortal Automotive Performance"
+                title="Why Truck Owners Come Back to Us"
               />
               <div className="space-y-4 mb-8">
                 {[
-                  { title: 'Experienced Technicians', desc: 'Our certified mechanics have years of hands-on experience with trucks and diesel engines.' },
-                  { title: 'Honest Diagnostics & Fair Pricing', desc: 'We explain everything clearly before any work begins — no hidden fees, no unnecessary repairs.' },
-                  { title: 'Daily Driver & Performance Specialists', desc: 'Whether it\'s your work truck or a performance build, we handle it with equal care and precision.' },
-                  { title: 'Fast Turnaround Times', desc: 'We know your truck is your livelihood. We work efficiently to get you back on the road fast.' },
+                  { title: 'Diesel & Truck Specialists', desc: "We've been elbow-deep in diesel engines, transmission cases, and suspension setups long enough to know the difference between a real fix and a parts swap. We do it right or we tell you why." },
+                  { title: 'Straight Answers, Honest Pricing', desc: "We explain exactly what's wrong and what it costs before we touch a single bolt. No hidden fees. No fluffed-up repair orders. What we quote is what you pay." },
+                  { title: 'Daily Drivers & Performance Builds', desc: "Whether it's your work truck or a weekend build you've put serious money into, it gets the same attention. We handle both because we love both." },
+                  { title: 'Fast Turnaround, No Runaround', desc: "Your truck being down costs you something — time, money, or both. We work efficiently and communicate clearly so you're never left wondering what's happening." },
                 ].map(({ title, desc }, i) => (
                   <AnimatedSection key={title} delay={i * 0.1}>
                     <div className="flex gap-4 p-4 rounded-lg bg-brand-dark-3 border border-white/5 hover:border-brand-orange/30 transition-colors group">
@@ -216,48 +218,43 @@ export default function Home() {
       </section>
 
       {/* ── Full-width image divider ── */}
-      <div className="relative h-72 overflow-hidden">
+      <div className="relative h-80 overflow-hidden">
         <GrayscaleImage
-          src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=1600&q=80"
-          alt="Pickup truck side view"
+          src="/truck-hero.png"
+          alt="Pickup truck"
           overlayIntensity="strong"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/60 to-brand-dark" />
-        {/* Orange slash banner */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/40" />
+        <div className="absolute inset-0 hazard-stripe" />
         <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-brand-orange" />
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute top-0 left-0 right-0 h-1.5 bg-brand-orange" />
+        <div className="absolute inset-0 flex items-center px-8 md:px-12 lg:px-16">
           <AnimatedSection>
-            <p className="text-white/90 text-2xl md:text-4xl font-black tracking-widest uppercase text-center">
-              Honest. Strong. <span className="text-brand-orange">Reliable.</span>
+            <p className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white leading-none tracking-wide whitespace-nowrap">
+              Real Mechanics. Real Fixes. <span className="text-brand-orange">No BS.</span>
             </p>
           </AnimatedSection>
         </div>
       </div>
 
       {/* ── CTA Banner ── */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0">
-          <GrayscaleImage
-            src="https://images.unsplash.com/photo-1537726235470-8504e3beef77?w=1600&q=80"
-            alt="Mechanic tool bench"
-            overlayIntensity="medium"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/90 to-brand-dark/70" />
-        </div>
-        <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-brand-orange" />
+      <section className="relative py-24 overflow-hidden bg-black">
+        <div className="absolute inset-0 hazard-stripe" />
+        <div className="absolute left-0 top-0 bottom-0 w-2 bg-brand-orange" />
+        <div className="absolute right-0 top-0 bottom-0 w-2 bg-brand-orange" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
-              Ready to Get Your Truck{' '}
-              <span className="text-gradient">Back on the Road?</span>
+            <h2 className="font-display text-7xl md:text-9xl text-white leading-none tracking-wide mb-6">
+              Your Truck's Not Going{' '}
+              <span className="text-brand-orange">to Fix Itself.</span>
             </h2>
-            <p className="text-white/60 text-lg mb-8 max-w-xl mx-auto">
-              Book a service appointment today or give us a call — we're ready to help.
+            <p className="text-white/50 text-lg mb-10 max-w-xl mx-auto">
+              Give us a call or book online. We'll tell you what's wrong and what it costs — before we do anything.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link to="/contact" className="btn-primary text-base px-8 py-4">
-                Schedule Service
+                Book Your Service
               </Link>
               <a href="tel:7805047505" className="btn-outline text-base px-8 py-4">
                 <Phone size={18} />
@@ -272,9 +269,9 @@ export default function Home() {
       <section className="py-20 md:py-28 bg-brand-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            label="What Clients Say"
-            title="Our Promise to You"
-            subtitle="Honest, strong, reliable — that's the Immortal Automotive standard."
+            label="Customer Reviews"
+            title="Don't Take Our Word For It"
+            subtitle="Real customers. Real trucks. Real results."
             center
           />
           <div className="grid md:grid-cols-3 gap-6">

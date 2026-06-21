@@ -21,37 +21,37 @@ const specialtyServices = [
   {
     icon: Zap,
     title: 'Engine Diagnostics & Rebuild',
-    desc: 'Complete diesel engine diagnostics using industry-leading scan tools. From minor sensor faults to full engine rebuilds, we handle it all.',
+    desc: "When your check engine light comes on or your diesel starts acting up, we get to the actual root cause — not just clear the code and send you home hoping for the best.",
     items: ['Check Engine Light diagnosis', 'Diesel injector service', 'Turbo inspection & repair', 'Full engine rebuild'],
   },
   {
     icon: GitMerge,
     title: 'Transmission Repair & Rebuild',
-    desc: 'Whether you\'re losing power, slipping gears, or dealing with transmission noises, our specialists will diagnose and fix it right.',
+    desc: "Slipping gears, shuddering, weird noises at speed — transmission problems don't fix themselves. We rebuild them right, using quality parts that'll outlast the factory unit.",
     items: ['Automatic & manual transmission', 'Torque converter service', 'Clutch replacement', 'Full rebuild service'],
   },
   {
     icon: Activity,
     title: 'Suspension & Steering',
-    desc: 'Heavy trucks demand reliable suspension. We inspect, repair, and replace all suspension components to keep your rig stable and safe.',
+    desc: "A truck is only as capable as what's underneath it. Whether you're hauling, towing, or building something lifted, we'll set it up right so it handles the way it should.",
     items: ['Leaf spring replacement', 'Shock & strut service', 'Alignment inspection', 'Steering component repair'],
   },
   {
     icon: ShieldCheck,
     title: 'Electrical & Diagnostics',
-    desc: 'Modern trucks are complex. Our diagnostic equipment and experienced technicians track down electrical faults fast.',
+    desc: "Electrical gremlins are the worst — and the hardest to find if you don't have the right tools and experience. We do. We track it down fast and fix it properly.",
     items: ['Full electrical diagnosis', 'Wiring harness repair', 'Battery & alternator service', 'ABS & traction control'],
   },
   {
     icon: Wind,
     title: 'HVAC System Repair',
-    desc: 'Keep your cab comfortable in any season. We service and repair all heating, ventilation, and air conditioning systems.',
+    desc: "Alberta winters are brutal and summers aren't much better. Your heat and AC have to work. If your climate control is acting up, bring it in and we'll sort it out.",
     items: ['AC recharge & repair', 'Heater core service', 'Blower motor replacement', 'Climate control diagnosis'],
   },
   {
     icon: Gauge,
     title: 'Performance Upgrades',
-    desc: 'Looking to get more out of your diesel? We offer performance tuning and upgrades tailored to your truck\'s needs.',
+    desc: "Want more out of your truck than it came with from the factory? We do performance builds and upgrades — from bolt-ons to full engine work. Tell us what you're after.",
     items: ['ECU tuning & remapping', 'Exhaust system upgrade', 'Intake & intercooler', 'Fuel system optimization'],
   },
 ]
@@ -60,62 +60,65 @@ export default function Services() {
   return (
     <>
       {/* ── Page Hero ── */}
-      <section className="relative pt-36 pb-20 overflow-hidden">
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          {/* Transmission gears — close match to reference image 2 */}
           <GrayscaleImage
-            src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=1600&q=80"
-            alt="Pickup truck in repair shop"
+            src="/truck-hero.png"
+            alt="White Chevy Silverado"
             overlayIntensity="strong"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/80 to-brand-dark" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent" />
         </div>
         <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-brand-orange" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
-            >
-              <span className="section-label block mb-4">Expert Repair</span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-white mb-6">
-                Truck Engine &{' '}
-                <span className="text-gradient">Transmission Specialists</span>
-              </h1>
-              <p className="text-white/60 text-lg leading-relaxed mb-8">
-                At Immortal Automotive Performance, we specialize in truck engine diagnostics, rebuilds, and transmission repair. Whether you're dealing with a loss of power, engine noise, or transmission issues, we provide reliable repairs designed to keep your truck running strong.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Link to="/contact" className="btn-primary">
-                  Schedule Service
-                  <ChevronRight size={16} />
-                </Link>
-                <a href="tel:7805047505" className="btn-outline">
-                  <Phone size={16} />
-                  Call Us
-                </a>
-              </div>
-            </motion.div>
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="max-w-3xl"
+          >
+            <span className="section-label block mb-4">Expert Repair</span>
+            <h1 className="font-display text-7xl md:text-8xl lg:text-9xl leading-none text-white mb-6 tracking-wide">
+              Truck Engine &{' '}
+              <span className="text-gradient">Transmission Specialists</span>
+            </h1>
+            <p className="text-white/60 text-lg leading-relaxed mb-8 max-w-xl">
+              We've seen it all — blown head gaskets, slipping transmissions, mystery codes that three other shops couldn't crack. If your truck's got a problem, we'll find it, tell you straight what it costs, and fix it right.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Link to="/contact" className="btn-primary">
+                Schedule Service
+                <ChevronRight size={16} />
+              </Link>
+              <a href="tel:7805047505" className="btn-outline">
+                <Phone size={16} />
+                Call Us
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
-            {/* Hero side image — engine block work */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="relative hidden md:block h-80 rounded-xl overflow-hidden"
-            >
-              <GrayscaleImage
-                src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&q=80"
-                alt="Mechanic working on engine block"
-                overlayIntensity="medium"
-              />
-              {/* Orange accent bar — like the reference label banners */}
-              <div className="absolute bottom-0 left-0 right-0 bg-brand-orange px-4 py-2">
-                <span className="text-white font-black text-sm uppercase tracking-widest">Engine Specialists</span>
+      {/* ── How It Works ── */}
+      <section className="bg-black border-b border-white/5 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10">
+            {[
+              { step: '01', title: 'Book It', desc: "Call, text, or fill out the form. Tell us what's going on and we'll get you in." },
+              { step: '02', title: 'We Diagnose', desc: 'We find the actual problem — not just the symptom. Full diagnostic before any work starts.' },
+              { step: '03', title: 'You Approve, Then We Wrench', desc: "We tell you exactly what it'll cost. You say go. Only then do we touch your truck." },
+            ].map(({ step, title, desc }) => (
+              <div key={step} className="p-8 group relative overflow-hidden">
+                <div className="font-display text-[8rem] leading-none text-white/5 absolute -top-4 -left-2 select-none group-hover:text-brand-orange/10 transition-colors duration-500">{step}</div>
+                <div className="relative">
+                  <div className="font-display text-6xl text-brand-orange leading-none mb-4">{step}</div>
+                  <div className="text-white font-bold text-xl mb-2">{title}</div>
+                  <div className="text-white/50 text-sm leading-relaxed">{desc}</div>
+                </div>
               </div>
-            </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -228,10 +231,10 @@ export default function Services() {
                 Schedule <span className="text-gradient">Service</span>
               </h2>
               <p className="text-white/60 leading-relaxed mb-6">
-                Choose your service, select a date, and we'll take care of the rest. Booking takes less than two minutes.
+                Tell us what's going on and we'll get you in. No obligation, no runaround — just straight answers and solid work.
               </p>
               <ul className="space-y-2 mb-8">
-                {['No obligation estimate', 'Same-day appointments available', 'Expert technicians on every job'].map(item => (
+                {['Free diagnostic estimate', 'Same-day appointments often available', 'We tell you the cost before we touch it'].map(item => (
                   <li key={item} className="flex items-center gap-2 text-white/70 text-sm">
                     <CheckCircle2 size={15} className="text-brand-orange" />
                     {item}
