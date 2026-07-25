@@ -36,7 +36,7 @@ const whyUs = [
 const stats = [
   { value: '100%', label: 'Satisfaction Guarantee' },
   { value: '300+', label: 'Trucks Serviced' },
-  { value: '4.9★', label: 'Google Rating' },
+  { value: '5★', label: 'Google Rating' },
   { value: '24hr', label: 'Avg. Turnaround' },
 ]
 

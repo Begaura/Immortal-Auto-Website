@@ -70,7 +70,7 @@ export default function GoogleReviewsMarquee() {
           <div className="leading-tight">
             <div className="text-white font-bold text-base whitespace-nowrap">Google Reviews</div>
             <div className="flex items-center gap-1 text-brand-orange text-lg font-bold">
-              4.9
+              5.0
               <Star size={16} className="fill-brand-orange text-brand-orange" />
             </div>
             <div className="text-white/30 text-[11px] uppercase tracking-wide mt-1 whitespace-nowrap">

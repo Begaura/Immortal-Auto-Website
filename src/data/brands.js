@@ -85,6 +85,7 @@ export const accessoryBrands = [
   {
     slug: 'bak-industries',
     name: 'BAK Industries',
+    logo: '/bakflip.webp',
     tagline: 'BAKFlip Tonneau Covers',
     desc: 'If you want a folding tonneau that actually locks and holds up to real use, BAKFlip is the one. We install these all the time for a reason.',
     badge: 'Bed Covers',
@@ -92,6 +93,7 @@ export const accessoryBrands = [
   {
     slug: 'truxedo',
     name: 'Truxedo',
+    logo: '/truxedo.webp',
     tagline: 'Roll-Up Tonneau Covers',
     desc: 'Clean, low-profile, and easy to use. Truxedo roll-up covers are a great option if you want to keep things simple without skimping on quality.',
     badge: 'Bed Covers',
@@ -99,6 +101,7 @@ export const accessoryBrands = [
   {
     slug: 'husky-liners',
     name: 'Husky Liners',
+    logo: '/husky-liners.webp',
     tagline: 'Floor Liners & Mud Flaps',
     desc: 'If your truck sees dirt, mud, or snow (this is Alberta — it sees all three), Husky Liners are worth every penny. Easy to clean, built to last.',
     badge: 'Accessories',
@@ -106,6 +109,7 @@ export const accessoryBrands = [
   {
     slug: 'weathertech',
     name: 'WeatherTech',
+    logo: '/weathertech.webp',
     tagline: 'Mats, Liners & More',
     desc: 'Made to fit your exact truck. WeatherTech floor mats and cargo liners keep the interior looking good no matter what you track in.',
     badge: 'Accessories',
