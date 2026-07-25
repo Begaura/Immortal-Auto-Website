@@ -1,4 +1,13 @@
-export default function GrayscaleImage({ src, alt, className = '', overlayIntensity = 'medium' }) {
+export default function GrayscaleImage({
+  src,
+  alt,
+  className = '',
+  overlayIntensity = 'medium',
+  loading = 'lazy',
+  fetchPriority = 'auto',
+  width,
+  height,
+}) {
   const overlays = {
     light:  'from-brand-orange/10 via-transparent to-transparent',
     medium: 'from-brand-orange/20 via-brand-orange/5 to-transparent',
@@ -10,6 +19,10 @@ export default function GrayscaleImage({ src, alt, className = '', overlayIntens
       <img
         src={src}
         alt={alt}
+        width={width}
+        height={height}
+        loading={loading}
+        fetchPriority={fetchPriority}
         className={`w-full h-full object-cover grayscale contrast-125 brightness-75 ${className}`}
       />
       {/* Orange gradient accent — mimics the selective-color look */}

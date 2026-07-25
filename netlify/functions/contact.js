@@ -1,4 +1,4 @@
-import sgMail from '@sendgrid/mail'
+import { Resend } from 'resend'
 
 export default async (req) => {
   if (req.method !== 'POST') {
@@ -19,16 +19,16 @@ export default async (req) => {
     }
 
     const to = process.env.CONTACT_TO_EMAIL
-    const from = process.env.SENDGRID_FROM_EMAIL || to
+    const from = process.env.RESEND_FROM_EMAIL
 
-    if (!to) {
+    if (!to || !from) {
       return new Response(JSON.stringify({ error: 'Recipient not configured' }), {
         status: 500,
         headers: { 'Content-Type': 'application/json' },
       })
     }
 
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+    const resend = new Resend(process.env.RESEND_API_KEY)
 
     const subject = `Website Contact: ${name}`
     const text = `Name: ${name}\nEmail: ${email}\nPhone: ${phone || ''}\nService: ${service || ''}\nPreferred date: ${date || ''}\n\nMessage:\n${message || ''}`
@@ -41,7 +41,8 @@ export default async (req) => {
       <p><strong>Message:</strong><br/>${(message || '').replace(/\n/g, '<br/>')}</p>
     `
 
-    await sgMail.send({ to, from, subject, text, html })
+    const { error } = await resend.emails.send({ to, from, replyTo: email, subject, text, html })
+    if (error) throw new Error(error.message || 'Resend API error')
 
     return new Response(JSON.stringify({ ok: true }), {
       status: 200,

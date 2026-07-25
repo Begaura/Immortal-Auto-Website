@@ -1,0 +1,46 @@
+export const posts = [
+  {
+    slug: 'signs-your-transmission-is-failing',
+    title: '5 Signs Your Transmission Is Failing (And What To Do About It)',
+    date: '2026-01-15',
+    excerpt: 'Slipping gears, shuddering, and delayed engagement all mean something — here\'s how to tell the difference between a minor fix and a bigger problem before it strands you.',
+    content: [
+      "Transmission problems rarely show up out of nowhere — there are almost always warning signs before a full failure, and catching them early is usually the difference between a fluid service and a full rebuild.",
+      "**Slipping gears.** If your engine revs higher than it should before the transmission catches up, or you feel a delay between pressing the gas and actually accelerating, that's a classic sign of internal wear or low/degraded fluid.",
+      "**Shuddering or shaking during shifts.** A slight shudder around 30–45 km/h, especially in automatics with a torque converter lockup clutch, often points to a failing torque converter or contaminated fluid.",
+      "**Delayed or hard engagement.** If there's a noticeable pause when you shift from park to drive, or the truck lurches hard into gear, the transmission may be low on fluid or the internal clutches are wearing out.",
+      "**Unusual noises.** Whining, clunking, or humming that changes with vehicle speed (not engine RPM) often traces back to transmission bearings or gear wear rather than the engine.",
+      "**Burning smell or dark, gritty fluid.** Transmission fluid should be reddish and relatively clean. If it's dark brown, smells burnt, or has visible debris, the internals are already taking damage.",
+      "None of these symptoms tell you exactly what's wrong on their own — that's what a proper diagnostic is for. If you're noticing any of these, it's worth getting it looked at before a small issue turns into a full rebuild.",
+    ],
+  },
+  {
+    slug: 'diesel-truck-winter-maintenance-checklist-alberta',
+    title: 'Diesel Truck Winter Maintenance Checklist for Alberta',
+    date: '2026-02-03',
+    excerpt: 'Cold starts, gelled fuel, and battery strain are the biggest threats to a diesel truck in an Alberta winter — here\'s what to check before the temperature drops.',
+    content: [
+      "Alberta winters are hard on any vehicle, but diesel trucks have a few specific weak points that are worth checking before the cold really sets in.",
+      "**Fuel quality and additives.** Diesel fuel can gel in extreme cold, clogging fuel filters and starving the engine. Using a winter-blend fuel and anti-gel additive, especially below -20°C, helps keep fuel flowing properly.",
+      "**Battery and charging system.** Cold weather reduces battery capacity right when diesel engines need more cranking power to start. A weak battery or a charging system that's already marginal can leave you stranded on the coldest morning of the year.",
+      "**Glow plugs and block heaters.** Glow plugs that are worn out make cold starts harder and rougher on the engine. A block heater plugged in overnight dramatically reduces cold-start strain and wear.",
+      "**Fuel filters and water separators.** Diesel fuel systems are more sensitive to moisture and contamination in winter — a fuel filter or water separator that's due for service is a common cause of hard starting or stalling in cold weather.",
+      "**Coolant and heater system.** A functioning heater core and the correct coolant mix aren't just about comfort — they're part of keeping the engine at the right operating temperature in extreme cold.",
+      "A pre-winter inspection covering these points is a lot cheaper than a tow truck call in January. If it's been a while since your truck's had a full once-over, now's the time.",
+    ],
+  },
+  {
+    slug: 'what-happens-during-a-check-engine-light-diagnostic',
+    title: "Check Engine Light On? Here's What Actually Happens During a Diagnostic",
+    date: '2026-03-10',
+    excerpt: 'A check engine light can mean a lot of things — from a loose gas cap to a failing sensor. Here\'s what an honest diagnostic actually involves.',
+    content: [
+      "A check engine light triggers a lot of anxiety, mostly because it can mean almost anything — from something as minor as a loose gas cap to something as serious as a failing catalytic converter or transmission issue.",
+      "**Step one: pull the codes.** A diagnostic scan reads stored trouble codes from the vehicle's computer. This is the starting point, not the answer — a code points to a system or component, not necessarily the exact cause.",
+      "**Step two: verify, don't guess.** A code like \"P0300 — random misfire detected\" could be caused by ignition components, fuel delivery, a vacuum leak, or several other things. A proper diagnostic means testing the actual components — not just replacing the first part that comes to mind and hoping it fixes things.",
+      "**Step three: confirm the fix before it's approved.** Once the actual cause is identified, that's when you should get a real explanation of what's wrong and what it costs — before anyone touches the vehicle.",
+      "**Step four: clear and verify.** After the repair, the codes get cleared and the vehicle is tested to confirm the light stays off and the original symptom is actually resolved, not just masked.",
+      "The difference between a shop that does this properly and one that doesn't usually shows up later — either the same light comes back in a few weeks, or it doesn't. A real diagnostic costs a bit more upfront than guessing, but it's the only way to actually fix the problem the first time.",
+    ],
+  },
+]

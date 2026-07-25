@@ -34,6 +34,9 @@ export default function Footer() {
                 { to: '/services', label: 'Services & Pricing' },
                 { to: '/brands', label: 'Our Brands' },
                 { to: '/about', label: 'About Us' },
+                { to: '/service-areas', label: 'Service Areas' },
+                { to: '/blog', label: 'Blog' },
+                { to: '/faq', label: 'FAQ' },
                 { to: '/contact', label: 'Contact Us' },
               ].map(({ to, label }) => (
                 <li key={to}>
@@ -70,9 +73,9 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://www.immortalauto.com" className="flex items-start gap-2.5 text-white/60 hover:text-brand-orange text-sm transition-colors">
+                <a href="https://immortalauto.com" className="flex items-start gap-2.5 text-white/60 hover:text-brand-orange text-sm transition-colors">
                   <Globe size={14} className="mt-0.5 flex-shrink-0 text-brand-orange" />
-                  www.immortalauto.com
+                  immortalauto.com
                 </a>
               </li>
               <li>

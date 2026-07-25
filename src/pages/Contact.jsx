@@ -4,6 +4,7 @@ import { Phone, MapPin, Clock, Globe, CheckCircle2, Send } from 'lucide-react'
 import AnimatedSection from '../components/AnimatedSection'
 import SectionHeading from '../components/SectionHeading'
 import GrayscaleImage from '../components/GrayscaleImage'
+import Seo from '../components/Seo'
 
 const serviceOptions = [
   'Oil Change',
@@ -61,6 +62,11 @@ export default function Contact() {
 
   return (
     <>
+      <Seo
+        title="Contact Us | Book Truck & Diesel Repair | Immortal Automotive, Sherwood Park AB"
+        description="Book your truck or diesel repair at Immortal Automotive in Sherwood Park, AB. Call 780-504-7505 or request an appointment online — fast response, straight answers."
+        path="/contact"
+      />
       {/* ── Hero ── */}
       <section className="relative pt-36 pb-20 overflow-hidden">
         <div className="absolute inset-0">
@@ -118,8 +124,8 @@ export default function Contact() {
                     {
                       icon: Globe,
                       label: 'Website',
-                      value: 'www.immortalauto.com',
-                      href: 'https://www.immortalauto.com',
+                      value: 'immortalauto.com',
+                      href: 'https://immortalauto.com',
                       sub: 'Visit our website',
                     },
                     {
@@ -169,27 +175,27 @@ export default function Contact() {
                   </div>
                 </div>
 
-                {/* Map placeholder with B&W + orange style */}
+                {/* Live embedded map */}
                 <div className="relative rounded-xl overflow-hidden h-48 border border-white/10">
-                  <GrayscaleImage
-                    src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&q=60"
-                    alt="Map location area"
-                    overlayIntensity="medium"
+                  <iframe
+                    title="Immortal Automotive Performance Inc. location map"
+                    src="https://www.google.com/maps?q=114+Sioux+Rd,+Sherwood+Park,+AB&output=embed"
+                    className="absolute inset-0 w-full h-full grayscale contrast-125 brightness-90"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
                   />
-                  <div className="absolute inset-0 bg-brand-dark/50" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <a
-                      href="https://maps.google.com/?q=114+Sioux+Rd+Sherwood+Park+AB"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn-primary text-sm"
-                    >
-                      <MapPin size={14} />
-                      Open in Google Maps
-                    </a>
-                  </div>
+                  <div className="absolute inset-0 pointer-events-none bg-brand-orange/10 mix-blend-overlay" />
+                  <a
+                    href="https://maps.google.com/?q=114+Sioux+Rd+Sherwood+Park+AB"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute bottom-3 right-3 btn-primary text-xs py-2 px-4"
+                  >
+                    <MapPin size={13} />
+                    Get Directions
+                  </a>
                   {/* Orange bottom bar */}
-                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-brand-orange" />
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-brand-orange pointer-events-none" />
                 </div>
               </div>
             </AnimatedSection>

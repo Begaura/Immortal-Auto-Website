@@ -4,6 +4,17 @@
   functions = "netlify/functions"
 
 [[redirects]]
+  from = "https://www.immortalauto.com/*"
+  to = "https://immortalauto.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/api/contact"
+  to = "/.netlify/functions/contact"
+  status = 200
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200

@@ -8,6 +8,8 @@ import {
 import AnimatedSection from '../components/AnimatedSection'
 import SectionHeading from '../components/SectionHeading'
 import GrayscaleImage from '../components/GrayscaleImage'
+import GoogleReviewsMarquee from '../components/GoogleReviewsMarquee'
+import Seo from '../components/Seo'
 
 const services = [
   { icon: Wrench, label: 'General Repair' },
@@ -41,14 +43,23 @@ const stats = [
 export default function Home() {
   return (
     <>
+      <Seo
+        title="Immortal Automotive Performance Inc. | Heavy Duty Truck & Diesel Repair in Sherwood Park & Edmonton, AB"
+        description="Trusted heavy duty truck and diesel repair shop in Sherwood Park, AB, serving Edmonton. Engine diagnostics, transmission rebuilds, brakes, and fleet maintenance — honest pricing, straight answers."
+        path="/"
+      />
       {/* ── Hero ── */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0">
           {/* Heavy-duty truck in shop — grayscale + orange accent */}
           <GrayscaleImage
-            src="/burnout-truck.png"
-            alt="Black truck doing burnout"
+            src="/burnout-truck.webp"
+            alt="Black truck doing a burnout outside Immortal Automotive's Sherwood Park shop"
             overlayIntensity="strong"
+            loading="eager"
+            fetchPriority="high"
+            width={1536}
+            height={1024}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/70 via-brand-dark/60 to-brand-dark" />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/90 via-brand-dark/40 to-transparent" />
@@ -220,9 +231,11 @@ export default function Home() {
       {/* ── Full-width image divider ── */}
       <div className="relative h-80 overflow-hidden">
         <GrayscaleImage
-          src="/truck-hero.png"
-          alt="Pickup truck"
+          src="/truck-hero.webp"
+          alt="White pickup truck serviced by Immortal Automotive"
           overlayIntensity="strong"
+          width={1536}
+          height={1024}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/40" />
         <div className="absolute inset-0 hazard-stripe" />
@@ -274,37 +287,10 @@ export default function Home() {
             subtitle="Real customers. Real trucks. Real results."
             center
           />
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                quote: "They diagnosed my truck in half the time another shop quoted. Honest, quick, and the price was fair. They've got my business for life.",
-                name: 'Mike T.',
-                role: 'Fleet Owner, Edmonton',
-              },
-              {
-                quote: "Finally a shop that actually explains what's wrong instead of just handing you a bill. The transmission rebuild on my rig has been flawless.",
-                name: 'Dave R.',
-                role: 'Long-Haul Trucker',
-              },
-              {
-                quote: "Brought in my diesel pickup for a mysterious power loss. They found it, fixed it, and had me back running the same day. Incredible service.",
-                name: 'Sarah K.',
-                role: 'Contractor, Sherwood Park',
-              },
-            ].map(({ quote, name, role }, i) => (
-              <AnimatedSection key={name} delay={i * 0.15}>
-                <div className="card-dark p-6 h-full flex flex-col">
-                  <div className="text-brand-orange text-3xl font-black leading-none mb-4">"</div>
-                  <p className="text-white/70 text-sm leading-relaxed flex-1 mb-6">{quote}</p>
-                  <div className="border-t border-white/10 pt-4">
-                    <div className="font-bold text-white text-sm">{name}</div>
-                    <div className="text-white/40 text-xs mt-0.5">{role}</div>
-                  </div>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
         </div>
+        <AnimatedSection>
+          <GoogleReviewsMarquee />
+        </AnimatedSection>
       </section>
     </>
   )

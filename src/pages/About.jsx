@@ -4,6 +4,7 @@ import { ShieldCheck, Eye, Hammer, Clock, Heart, Users, ChevronRight, Phone, Tru
 import AnimatedSection from '../components/AnimatedSection'
 import SectionHeading from '../components/SectionHeading'
 import GrayscaleImage from '../components/GrayscaleImage'
+import Seo from '../components/Seo'
 
 const values = [
   {
@@ -41,14 +42,23 @@ const values = [
 export default function About() {
   return (
     <>
+      <Seo
+        title="About Immortal Automotive | Honest Diesel & Truck Mechanics in Sherwood Park, AB"
+        description="Meet Immortal Automotive Performance Inc. — a Sherwood Park truck and diesel repair shop built on honest diagnostics, fair pricing, and no upselling. Learn our story and values."
+        path="/about"
+      />
       {/* ── Hero ── */}
       <section className="relative pt-36 pb-20 overflow-hidden">
         <div className="absolute inset-0">
           {/* Mechanic working on engine — matches reference image 3 style */}
           <GrayscaleImage
-            src="/burnout-truck.png"
-            alt="Black truck doing burnout"
+            src="/burnout-truck.webp"
+            alt="Black truck doing a burnout outside Immortal Automotive's Sherwood Park shop"
             overlayIntensity="strong"
+            loading="eager"
+            fetchPriority="high"
+            width={1536}
+            height={1024}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/90 to-brand-dark" />
         </div>
@@ -79,9 +89,11 @@ export default function About() {
             <AnimatedSection direction="right">
               <div className="relative h-[420px] rounded-xl overflow-hidden">
                 <GrayscaleImage
-                  src="/about-hero.png"
-                  alt="Mechanic working on vehicle"
+                  src="/about-hero.webp"
+                  alt="Mechanic working on a vehicle at Immortal Automotive"
                   overlayIntensity="medium"
+                  width={1536}
+                  height={1024}
                 />
                 {/* Orange label banner overlay — like in the reference images */}
                 <div className="absolute bottom-0 left-0 right-0 bg-brand-orange px-6 py-3 flex items-center gap-3">
