@@ -89,11 +89,11 @@ export default function About() {
             <AnimatedSection direction="right">
               <div className="relative h-[420px] rounded-xl overflow-hidden">
                 <GrayscaleImage
-                  src="/about-hero.webp"
-                  alt="Mechanic working on a vehicle at Immortal Automotive"
+                  src="/shop-engine-swap.webp"
+                  alt="Immortal Automotive mechanic performing an engine swap in the shop"
                   overlayIntensity="medium"
-                  width={1536}
-                  height={1024}
+                  width={1600}
+                  height={900}
                 />
                 {/* Orange label banner overlay — like in the reference images */}
                 <div className="absolute bottom-0 left-0 right-0 bg-brand-orange px-6 py-3 flex items-center gap-3">
@@ -168,8 +168,8 @@ export default function About() {
       {/* ── Full-width image divider ── */}
       <div className="relative h-80 overflow-hidden">
         <GrayscaleImage
-          src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1600&q=80"
-          alt="Mechanic working on truck engine"
+          src="/shop-bay-wide.webp"
+          alt="Inside the Immortal Automotive shop bay working on customer trucks"
           overlayIntensity="strong"
         />
         <div className="absolute inset-0 bg-black/70" />
@@ -234,8 +234,8 @@ export default function About() {
             <AnimatedSection delay={0.2}>
               <div className="relative h-96 rounded-xl overflow-hidden">
                 <GrayscaleImage
-                  src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80"
-                  alt="Mechanic tools on shop bench"
+                  src="/shop-denali-lift.webp"
+                  alt="Heavy duty GMC Denali dually on the lift at Immortal Automotive"
                   overlayIntensity="medium"
                 />
                 {/* Orange accent bar */}
@@ -251,8 +251,8 @@ export default function About() {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0">
           <GrayscaleImage
-            src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=1600&q=80"
-            alt="Pickup truck"
+            src="/shop-suv-lift.webp"
+            alt="Truck raised on the lift at Immortal Automotive"
             overlayIntensity="strong"
           />
           <div className="absolute inset-0 bg-brand-dark/85" />

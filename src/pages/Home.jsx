@@ -148,8 +148,8 @@ export default function Home() {
             <AnimatedSection direction="right">
               <div className="relative h-96 rounded-xl overflow-hidden">
                 <GrayscaleImage
-                  src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&q=80"
-                  alt="Mechanic working on diesel engine"
+                  src="/shop-engine-work.webp"
+                  alt="Immortal Automotive mechanic working on a diesel engine"
                   overlayIntensity="medium"
                 />
                 {/* Orange corner accents */}
