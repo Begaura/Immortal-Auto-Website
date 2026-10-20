@@ -15,6 +15,16 @@
   status = 200
 
 [[redirects]]
+  from = "/blog"
+  to = "/know-your-truck"
+  status = 301
+
+[[redirects]]
+  from = "/blog/*"
+  to = "/know-your-truck/:splat"
+  status = 301
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200

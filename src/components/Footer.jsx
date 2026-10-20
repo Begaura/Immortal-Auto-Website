@@ -35,7 +35,7 @@ export default function Footer() {
                 { to: '/brands', label: 'Our Brands' },
                 { to: '/about', label: 'About Us' },
                 { to: '/service-areas', label: 'Service Areas' },
-                { to: '/blog', label: 'Blog' },
+                { to: '/know-your-truck', label: 'Know Your Truck' },
                 { to: '/faq', label: 'FAQ' },
                 { to: '/contact', label: 'Contact Us' },
               ].map(({ to, label }) => (
@@ -88,7 +88,7 @@ export default function Footer() {
                 <span className="flex items-start gap-2.5 text-white/60 text-sm">
                   <Clock size={14} className="mt-0.5 flex-shrink-0 text-brand-orange" />
                   <span>
-                    Mon–Fri: 9:00 AM – 6:00 PM<br />
+                    Mon–Fri: 9:00 AM – 5:00 PM<br />
                     Sat: Closed<br />
                     Sun: Closed
                   </span>

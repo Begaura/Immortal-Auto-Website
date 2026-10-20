@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ChevronRight, Calendar } from 'lucide-react'
+import { ChevronRight } from 'lucide-react'
 import AnimatedSection from '../components/AnimatedSection'
 import Seo from '../components/Seo'
 import { posts } from '../data/blog'
@@ -8,9 +8,9 @@ export default function Blog() {
   return (
     <>
       <Seo
-        title="Truck & Diesel Repair Tips | Immortal Automotive Blog"
-        description="Practical truck and diesel maintenance advice from Immortal Automotive Performance Inc. in Sherwood Park, AB — transmission warning signs, winter maintenance, and honest diagnostics."
-        path="/blog"
+        title="Know Your Truck: Truck & Diesel Repair Tips | Immortal Automotive"
+        description="Practical truck and diesel maintenance advice from Immortal Automotive Performance Inc. in Sherwood Park, AB — transmission warning signs, winter maintenance, DPF care, and honest diagnostics."
+        path="/know-your-truck"
       />
 
       <section className="relative pt-36 pb-20 bg-brand-dark overflow-hidden">
@@ -19,7 +19,7 @@ export default function Blog() {
           <AnimatedSection>
             <span className="section-label block mb-4">From the Shop</span>
             <h1 className="font-display text-6xl md:text-7xl text-white leading-none tracking-wide mb-6">
-              Truck & Diesel <span className="text-gradient">Tips</span>
+              Know Your <span className="text-gradient">Truck</span>
             </h1>
             <p className="text-white/60 text-lg max-w-xl mx-auto">
               Straight, practical advice — no filler, no upsell.
@@ -30,13 +30,9 @@ export default function Blog() {
 
       <section className="py-20 bg-brand-dark-2">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-          {posts.map(({ slug, title, excerpt, date }, i) => (
+          {posts.map(({ slug, title, excerpt }, i) => (
             <AnimatedSection key={slug} delay={i * 0.08}>
-              <Link to={`/blog/${slug}`} className="card-dark p-7 flex flex-col gap-3 hover:border-brand-orange/30 transition-colors block">
-                <div className="flex items-center gap-2 text-white/40 text-xs uppercase tracking-wider">
-                  <Calendar size={13} />
-                  {new Date(date).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' })}
-                </div>
+              <Link to={`/know-your-truck/${slug}`} className="card-dark p-7 flex flex-col gap-3 hover:border-brand-orange/30 transition-colors block">
                 <h2 className="text-white font-bold text-xl">{title}</h2>
                 <p className="text-white/55 text-sm leading-relaxed">{excerpt}</p>
                 <span className="inline-flex items-center gap-1 text-brand-orange text-sm font-semibold">

@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate, useLocation, useParams } from 'react-router-dom'
 import { useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -14,6 +14,11 @@ import FAQ from './pages/FAQ'
 import ServiceAreas from './pages/ServiceAreas'
 import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
+
+function OldBlogRedirect() {
+  const { slug } = useParams()
+  return <Navigate to={`/know-your-truck/${slug}`} replace />
+}
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
@@ -36,7 +41,7 @@ const localBusinessSchema = {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
       opens: '09:00',
-      closes: '18:00',
+      closes: '17:00',
     },
   ],
 }
@@ -65,8 +70,10 @@ export default function App() {
             <Route path="/brands/:slug" element={<BrandDetail />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/service-areas" element={<ServiceAreas />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/know-your-truck" element={<Blog />} />
+            <Route path="/know-your-truck/:slug" element={<BlogPost />} />
+            <Route path="/blog" element={<Navigate to="/know-your-truck" replace />} />
+            <Route path="/blog/:slug" element={<OldBlogRedirect />} />
           </Routes>
         </main>
         <Footer />

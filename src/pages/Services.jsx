@@ -220,7 +220,7 @@ export default function Services() {
                     { label: 'Phone', value: '780-504-7505', href: 'tel:7805047505' },
                     { label: 'Email', value: 'info@immortalauto.com', href: 'mailto:info@immortalauto.com' },
                     { label: 'Address', value: '114 Sioux Rd, Sherwood Park, AB', href: null },
-                    { label: 'Hours', value: 'Mon–Fri 9AM–6PM | Sat–Sun Closed', href: null },
+                    { label: 'Hours', value: 'Mon–Fri 9AM–5PM | Sat–Sun Closed', href: null },
                   ].map(({ label, value, href }) => (
                     <div key={label} className="flex flex-col gap-0.5">
                       <span className="text-white/30 text-xs uppercase tracking-wider">{label}</span>
