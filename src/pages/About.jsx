@@ -90,6 +90,7 @@ export default function About() {
               <div className="relative h-[420px] rounded-xl overflow-hidden">
                 <GrayscaleImage
                   src="/shop-engine-swap.webp"
+                  sizes="(max-width: 767px) 800px, 750px"
                   alt="Immortal Automotive mechanic performing an engine swap in the shop"
                   overlayIntensity="medium"
                   width={1600}
@@ -235,6 +236,7 @@ export default function About() {
               <div className="relative h-96 rounded-xl overflow-hidden">
                 <GrayscaleImage
                   src="/shop-denali-lift.webp"
+                  sizes="(max-width: 767px) 800px, 750px"
                   alt="Heavy duty GMC Denali dually on the lift at Immortal Automotive"
                   overlayIntensity="medium"
                 />

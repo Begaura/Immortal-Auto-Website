@@ -149,6 +149,7 @@ export default function Home() {
               <div className="relative h-96 rounded-xl overflow-hidden">
                 <GrayscaleImage
                   src="/shop-engine-work.webp"
+                  sizes="(max-width: 767px) 800px, 750px"
                   alt="Immortal Automotive mechanic working on a diesel engine"
                   overlayIntensity="medium"
                 />

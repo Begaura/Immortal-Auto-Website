@@ -2,7 +2,7 @@ export const performanceBrands = [
   {
     slug: 'ac-delco',
     name: 'AC Delco',
-    logo: '/acdelco.png',
+    logo: '/acdelco.webp',
     tagline: 'OEM Parts & Fluids',
     desc: 'The same parts your truck came with from the factory. We stock AC Delco filters, batteries, belts, brakes, and more — because why mess with what works.',
     badge: 'OEM Parts',
@@ -18,7 +18,7 @@ export const performanceBrands = [
   {
     slug: 'raybestos',
     name: 'Raybestos',
-    logo: '/raybestos.png',
+    logo: '/raybestos.webp',
     tagline: 'Brakes That Actually Stop',
     desc: 'We trust Raybestos on our own vehicles — that should tell you something. Great pads and rotors at a price that makes sense.',
     badge: 'Brakes',
@@ -58,7 +58,7 @@ export const performanceBrands = [
   {
     slug: 'bd-diesel-performance',
     name: 'BD Diesel Performance',
-    logo: '/bd-diesel.png',
+    logo: '/bd-diesel.webp',
     tagline: 'Diesel Performance Parts',
     desc: 'BD Diesel makes some of the most trusted performance parts for diesel trucks — exhaust brakes, transmission kits, turbos, and more. Built tough for trucks that work hard.',
     badge: 'Diesel',
@@ -66,7 +66,7 @@ export const performanceBrands = [
   {
     slug: 'borla',
     name: 'Borla',
-    logo: '/borla.png',
+    logo: '/borla.webp',
     tagline: 'Performance Exhaust Systems',
     desc: 'Borla exhaust systems are built from aircraft-quality stainless steel and sound incredible. If you want your truck to sound as good as it runs, this is the brand.',
     badge: 'Exhaust',
